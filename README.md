@@ -1,96 +1,125 @@
-# 🏎️ formula1 - Flutter F1 App
+# 🏎️ Formula 1 Application
+### (Flutter Tabanlı F1 Bilgi ve Takip Sistemi)
 
-A new Flutter project. This project is a starting point for a Flutter application.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](#)
+[![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)](#)
+[![Material Design](https://img.shields.io/badge/Material--Design-757575?style=flat&logo=material-design&logoColor=white)](#)
 
-Welcome to the **Flutter F1 App** repository! This is a cross-platform mobile application built to provide Formula 1 fans with race schedules, driver and constructor standings, and the latest updates from the grid. 
+Bu proje, Formula 1 tutkunları için geliştirilmiş; yarış takvimini, sürücü/takım sıralamalarını ve güncel sonuçları takip etmeyi sağlayan modern bir Flutter mobil uygulamasıdır.
 
-## 👨🏼‍💻 About the Developer & Motivation
-
-I have been trying to improve myself since I graduated from Ankara University Computer Engineering. For this, I attend courses from online platforms. I have about 6 months of experience on Ruby on Rails as a Full Stack Developer. I am currently trying to improve myself in Front-end, Back-end, and cross-platform mobile development. The courses I take are on these topics and I develop projects on my own. This repository is a practical mobile application I built to explore the Flutter framework and Dart programming language!
-
-## ✨ Features
-
-*   **Race Calendar:** View upcoming and past Formula 1 race schedules, locations, and dates.
-*   **Standings:** Track the current season's Driver and Constructor championship standings.
-*   **Media/Video Integration:** Fetches content using the YouTube API.
-*   **Cross-Platform:** Beautiful, responsive UI designed to work seamlessly on both iOS and Android devices.
-
-## 🛠️ Tech Stack
-
-*   **Framework:** Flutter
-*   **Language:** Dart
-*   **Data Fetching:** HTTP (REST APIs / YouTube API)
-*   **Version Control:** Git & GitHub
-
-## 🚀 Getting Started
-
-Follow these instructions to get a copy of the app up and running on your local machine for development and testing.
-
-### Prerequisites
-
-Ensure you have the Flutter SDK installed on your system. If not, follow the official [Flutter installation guide](https://docs.flutter.dev/get-started/install).
-*   Flutter SDK
-*   Android Studio / Xcode (for emulators and building)
-*   Git
-
-### Installation & Configuration
-
-1.  **Clone the repository:**
-    
-    ```bash
-    git clone https://github.com/halukcansarioz/Flutter-F1-App.git
-    ```
-
-2.  **Navigate to the project directory:**
-
-    ```bash
-    cd Flutter-F1-App
-    ```
-
-3.  **Setup YouTube API Key:**
-    ⚠️ **Important:** Remember to add your own YouTube API Key before running the app. 
-    Create or modify the `utilities/keys.dart` file and add your key:
-    ```dart
-    const String API_KEY = '<YOUR_API_KEY>';
-    ```
-
-4.  **Install dependencies:**
-
-    ```bash
-    flutter pub get
-    ```
-
-5.  **Run the application:**
-    Ensure you have a device connected or an emulator/simulator running, then execute:
-
-    ```bash
-    flutter run
-    ```
-
-### 📚 Flutter Learning Resources
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view the [online documentation](https://flutter.dev/docs), which offers tutorials, samples, guidance on mobile development, and a full API reference.
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! 
-Feel free to check the [issues page](https://github.com/halukcansarioz/Flutter-F1-App/issues) if you want to contribute to the app's development.
-
-## 📜 License
-
-This project is open-source and available under the MIT License - see the LICENSE file for details.
-
-## 📫 Contact
-
-**Haluk Can Sarıöz**
-*   **GitHub:** [@HalukCanSarioz](https://github.com/HalukCanSarioz)
-*   **Email:** halukcansarioz19@gmail.com
-*   **LinkedIn:** [Haluk Can Sarıöz](https://www.linkedin.com/in/halukcansarioz)
+## 📚 İçindekiler
+- [Proje Hakkında](#proje-hakkında)
+- [Özellikler](#özellikler)
+- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
+- [Kurulum ve Kullanım](#kurulum-ve-kullanım)
+- [Proje Yapısı](#proje-yapısı)
+- [Geliştirme Süreci](#geliştirme-süreci)
+- [Katkıda Bulunma](#katkıda-bulunma)
+- [İletişim](#iletişim)
+- [Lisans](#lisans)
 
 ---
-*If you are an F1 fan and liked this app, please consider giving the repository a ⭐!*
+
+## Proje Hakkında
+Bu uygulama, web servisleri (API) aracılığıyla güncel Formula 1 verilerini çeker ve kullanıcıya temiz bir arayüzle sunar. Yarış sonuçlarına, puan durumlarına ve sürücü biyografilerine hızlı erişim imkanı sağlar.
+
+* **Geliştirici:** Haluk Can SARIÖZ
+* **Platform:** Android & iOS (Cross-platform)
+* **Veri Kaynağı:** OpenF1 / Ergast API
+
+---
+
+## Özellikler
+* **Canlı Sonuçlar:** Yarış hafta sonlarındaki seans sonuçlarının anlık takibi.
+* **Sıralama Tabloları:** Güncel Sürücüler (Drivers) ve Markalar (Constructors) şampiyonası puan durumu.
+* **Yarış Takvimi:** Sezonun tüm yarış tarihlerini ve pist bilgilerini içeren kapsamlı takvim.
+* **Detaylı İstatistikler:** Sürücü profilleri ve geçmiş başarılar.
+* **Karanlık Mod Desteği:** Kullanıcı tercihlerine göre uyarlanabilir görsel tema.
+
+---
+
+## Kullanılan Teknolojiler
+* **Flutter:** UI framework.
+* **Dart:** Programlama dili.
+* **HTTP/Dio:** API entegrasyonu ve veri çekme işlemleri.
+* **Provider/Bloc:** State management (durum yönetimi) çözümleri.
+* **Google Fonts:** Tipografi ve görsel tasarım.
+
+---
+
+## Kurulum ve Kullanım
+
+### 1. Depoyu Klonlayın
+```bash
+git clone [https://github.com/halukcansarioz/Flutter-F1-App.git](https://github.com/halukcansarioz/Flutter-F1-App.git)
+```
+
+### 2. Proje Dizinine Gidin
+```bash
+cd Flutter-F1-App
+```
+
+### 3. Bağımlılıkları Yükleyin
+```bash
+flutter pub get
+```
+
+### 4. Uygulamayı Başlatın
+```bash
+flutter run
+```
+
+---
+
+## Proje Yapısı
+```text
+Flutter-F1-App/
+├── assets/             # Görseller ve fontlar
+├── lib/
+│   ├── models/         # Veri modelleri
+│   ├── screens/        # UI ekranları
+│   ├── services/       # API servisleri
+│   ├── widgets/        # Tekrar kullanılabilir bileşenler
+│   └── main.dart       # Uygulama giriş noktası
+├── pubspec.yaml        # Paket yönetimi
+└── README.md           # Proje dökümantasyonu
+```
+
+---
+
+## Geliştirme Süreci
+
+### 1. Forklama
+Projeyi kendi hesabınıza fork'layarak geliştirmeye başlayabilirsiniz.
+
+### 2. Yeni Dal (Branch) Oluşturma
+```bash
+git checkout -b ozellik/yeni-ozellik-adi
+```
+
+### 3. Kodları Gönderme (Push)
+```bash
+git push origin ozellik/yeni-ozellik-adi
+```
+
+---
+
+## Katkıda Bulunma
+1. Bu depoyu **Fork**'layın.
+2. Bir **Branch** oluşturun (`git checkout -b feature/YeniOzellik`).
+3. Değişikliklerinizi yapın ve **Commit** edin (`git commit -m 'Ekleme: Yeni özellik'`).
+4. Kodlarınızı **Push**'layın (`git push origin feature/YeniOzellik`).
+5. Bir **Pull Request** açın.
+
+---
+
+## İletişim
+**Haluk Can Sarıöz** - [GitHub Profilim](https://github.com/halukcansarioz)  
+**Proje Linki:** [https://github.com/halukcansarioz/Flutter-F1-App](https://github.com/halukcansarioz/Flutter-F1-App)
+
+---
+
+## Lisans
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+```
