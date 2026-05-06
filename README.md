@@ -16,7 +16,7 @@ Bu proje, Formula 1 tutkunları için geliştirilmiş; yarış takvimini, sürü
 - [Proje Yapısı](#proje-yapısı)
 - [Geliştirme Süreci](#geliştirme-süreci)
 - [Katkıda Bulunma](#katkıda-bulunma)
-- [İletişim](#iletişim)
+- [İletişim](#iletisim)
 - [Lisans](#lisans)
 
 ---
@@ -52,7 +52,7 @@ Bu uygulama, web servisleri (API) aracılığıyla güncel Formula 1 verilerini 
 
 ### 1. Depoyu Klonlayın
 ```bash
-git clone [https://github.com/halukcansarioz/Flutter-F1-App.git](https://github.com/halukcansarioz/Flutter-F1-App.git)
+git clone https://github.com/halukcansarioz/Flutter-F1-App.git
 ```
 
 ### 2. Proje Dizinine Gidin
@@ -114,6 +114,7 @@ git push origin ozellik/yeni-ozellik-adi
 
 ---
 
+<a name="iletisim"></a>
 ## İletişim
 **Haluk Can Sarıöz** - [GitHub Profilim](https://github.com/halukcansarioz)  
 **Proje Linki:** [https://github.com/halukcansarioz/Flutter-F1-App](https://github.com/halukcansarioz/Flutter-F1-App)
@@ -122,4 +123,3 @@ git push origin ozellik/yeni-ozellik-adi
 
 ## Lisans
 Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
-```
