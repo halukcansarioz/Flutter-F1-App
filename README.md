@@ -1,125 +1,130 @@
+
 # 🏎️ Formula 1 Application
-### (Flutter Tabanlı F1 Bilgi ve Takip Sistemi)
+### (Flutter-Based F1 Information & Tracking System)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat&logo=flutter&logoColor=white)](#)
 [![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat&logo=dart&logoColor=white)](#)
 [![Material Design](https://img.shields.io/badge/Material--Design-757575?style=flat&logo=material-design&logoColor=white)](#)
 
-Bu proje, Formula 1 tutkunları için geliştirilmiş; yarış takvimini, sürücü/takım sıralamalarını ve güncel sonuçları takip etmeyi sağlayan modern bir Flutter mobil uygulamasıdır.
+This project is a modern Flutter mobile application developed for Formula 1 enthusiasts, enabling users to track the race calendar, driver/team standings, and up‑to‑date results.
 
-## 📚 İçindekiler
-- [Proje Hakkında](#proje-hakkında)
-- [Özellikler](#özellikler)
-- [Kullanılan Teknolojiler](#kullanılan-teknolojiler)
-- [Kurulum ve Kullanım](#kurulum-ve-kullanım)
-- [Proje Yapısı](#proje-yapısı)
-- [Geliştirme Süreci](#geliştirme-süreci)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [İletişim](#iletisim)
-- [Lisans](#lisans)
-
----
-
-## Proje Hakkında
-Bu uygulama, web servisleri (API) aracılığıyla güncel Formula 1 verilerini çeker ve kullanıcıya temiz bir arayüzle sunar. Yarış sonuçlarına, puan durumlarına ve sürücü biyografilerine hızlı erişim imkanı sağlar.
-
-* **Geliştirici:** Haluk Can SARIÖZ
-* **Platform:** Android & iOS (Cross-platform)
-* **Veri Kaynağı:** OpenF1 / Ergast API
+## 📚 Table of Contents
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation & Usage](#installation--usage)
+- [Project Structure](#project-structure)
+- [Development Process](#development-process)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [License](#license)
 
 ---
 
-## Özellikler
-* **Canlı Sonuçlar:** Yarış hafta sonlarındaki seans sonuçlarının anlık takibi.
-* **Sıralama Tabloları:** Güncel Sürücüler (Drivers) ve Markalar (Constructors) şampiyonası puan durumu.
-* **Yarış Takvimi:** Sezonun tüm yarış tarihlerini ve pist bilgilerini içeren kapsamlı takvim.
-* **Detaylı İstatistikler:** Sürücü profilleri ve geçmiş başarılar.
-* **Karanlık Mod Desteği:** Kullanıcı tercihlerine göre uyarlanabilir görsel tema.
+## About the Project
+This application fetches up‑to‑date Formula 1 data via web services (APIs) and presents it through a clean interface. It provides quick access to race results, championship standings, and driver biographies.
+
+- **Developer:** Haluk Can SARIÖZ
+- **Platform:** Android & iOS (Cross‑platform)
+- **Data Source:** OpenF1 / Ergast API
 
 ---
 
-## Kullanılan Teknolojiler
-* **Flutter:** UI framework.
-* **Dart:** Programlama dili.
-* **HTTP/Dio:** API entegrasyonu ve veri çekme işlemleri.
-* **Provider/Bloc:** State management (durum yönetimi) çözümleri.
-* **Google Fonts:** Tipografi ve görsel tasarım.
+## Features
+- **Live Results** – Real‑time tracking of session results during race weekends.
+- **Standings Tables** – Current Drivers and Constructors championship points.
+- **Race Calendar** – A comprehensive calendar with all season race dates and circuit information.
+- **Detailed Statistics** – Driver profiles and historical achievements.
+- **Dark Mode Support** – Adaptive visual theme based on user preferences.
 
 ---
 
-## Kurulum ve Kullanım
+## Technologies Used
+- **Flutter** – UI framework.
+- **Dart** – Programming language.
+- **HTTP / Dio** – API integration and data fetching.
+- **Provider / Bloc** – State management solutions.
+- **Google Fonts** – Typography and visual design.
 
-### 1. Depoyu Klonlayın
+---
+
+## Installation & Usage
+
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/halukcansarioz/Flutter-F1-App.git
 ```
 
-### 2. Proje Dizinine Gidin
+### 2. Navigate to the Project Directory
 ```bash
 cd Flutter-F1-App
 ```
 
-### 3. Bağımlılıkları Yükleyin
+### 3. Install Dependencies
 ```bash
 flutter pub get
 ```
 
-### 4. Uygulamayı Başlatın
+### 4. Launch the Application
 ```bash
 flutter run
 ```
 
 ---
 
-## Proje Yapısı
+## Project Structure
 ```text
 Flutter-F1-App/
-├── assets/             # Görseller ve fontlar
+├── assets/             # Images and fonts
 ├── lib/
-│   ├── models/         # Veri modelleri
-│   ├── screens/        # UI ekranları
-│   ├── services/       # API servisleri
-│   ├── widgets/        # Tekrar kullanılabilir bileşenler
-│   └── main.dart       # Uygulama giriş noktası
-├── pubspec.yaml        # Paket yönetimi
-└── README.md           # Proje dökümantasyonu
+│   ├── models/         # Data models
+│   ├── screens/        # UI screens
+│   ├── services/       # API services
+│   ├── widgets/        # Reusable components
+│   └── main.dart       # Application entry point
+├── pubspec.yaml        # Package management
+└── README.md           # Project documentation
 ```
 
 ---
 
-## Geliştirme Süreci
+## Development Process
 
-### 1. Forklama
-Projeyi kendi hesabınıza fork'layarak geliştirmeye başlayabilirsiniz.
+### 1. Fork the Repository
+Fork the project to your own account and start developing.
 
-### 2. Yeni Dal (Branch) Oluşturma
+### 2. Create a New Branch
 ```bash
-git checkout -b ozellik/yeni-ozellik-adi
+git checkout -b feature/new-feature-name
 ```
 
-### 3. Kodları Gönderme (Push)
+### 3. Push Your Code
 ```bash
-git push origin ozellik/yeni-ozellik-adi
+git push origin feature/new-feature-name
 ```
 
 ---
 
-## Katkıda Bulunma
-1. Bu depoyu **Fork**'layın.
-2. Bir **Branch** oluşturun (`git checkout -b feature/YeniOzellik`).
-3. Değişikliklerinizi yapın ve **Commit** edin (`git commit -m 'Ekleme: Yeni özellik'`).
-4. Kodlarınızı **Push**'layın (`git push origin feature/YeniOzellik`).
-5. Bir **Pull Request** açın.
+## Contributing
+1. **Fork** this repository.
+2. Create a **Branch** (`git checkout -b feature/NewFeature`).
+3. Make your changes and **Commit** (`git commit -m 'Add: New feature'`).
+4. **Push** your code (`git push origin feature/NewFeature`).
+5. Open a **Pull Request**.
 
 ---
 
-<a name="iletisim"></a>
-## İletişim
-**Haluk Can Sarıöz** - [GitHub Profilim](https://github.com/halukcansarioz)  
-**Proje Linki:** [https://github.com/halukcansarioz/Flutter-F1-App](https://github.com/halukcansarioz/Flutter-F1-App)
+<a name="contact"></a>
+## Contact
+**Haluk Can Sarıöz**
+- GitHub: [@halukcansarioz](https://github.com/halukcansarioz)
+- Email: [halukcansarioz19@gmail.com](mailto:halukcansarioz19@gmail.com)
+- LinkedIn: [Haluk Can Sarıöz](https://www.linkedin.com/in/halukcansarioz)
+
+**Project Link:** [https://github.com/halukcansarioz/Flutter-F1-App](https://github.com/halukcansarioz/Flutter-F1-App)
 
 ---
 
-## Lisans
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+## License
+This project is licensed under the [MIT License](LICENSE).
