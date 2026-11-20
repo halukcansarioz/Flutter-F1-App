@@ -125,6 +125,5 @@ git push origin feature/new-feature-name
 **Project Link:** [https://github.com/halukcansarioz/Flutter-F1-App](https://github.com/halukcansarioz/Flutter-F1-App)
 
 ---
-
 ## License
 This project is licensed under the [MIT License](LICENSE).
