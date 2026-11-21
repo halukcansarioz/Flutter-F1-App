@@ -15,7 +15,7 @@ import 'package:formula1/ataWidget.dart';
 import 'package:formula1/carlosSainz.dart';
 import 'package:formula1/chalesLeclerc.dart';
 import 'package:formula1/danielRicciardo.dart';
-import 'package:formula1/estebanOCON.dart';
+import 'package:formula1/estebanOcon.dart';
 import 'package:formula1/fernandoAlonso.dart';
 import 'package:formula1/georgeRussel.dart';
 import 'package:formula1/haas.dart';
